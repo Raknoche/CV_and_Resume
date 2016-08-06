@@ -1,0 +1,258 @@
+\documentclass[a4paper,10pt]{article}
+
+%A Few Useful Packages
+\usepackage{marvosym}
+\usepackage{fontspec} 					%for loading fonts
+\usepackage{xunicode,xltxtra,url,parskip} 	%other packages for formatting
+\RequirePackage{color,graphicx}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage[big]{layaureo} 				%better formatting of the A4 page
+% an alternative to Layaureo can be ** \usepackage{fullpage} **
+\usepackage{supertabular} 				%for Grades
+\usepackage{titlesec}					%custom \section
+
+%Setup hyperref package, and colours for links
+\usepackage{hyperref}
+\definecolor{linkcolour}{rgb}{0,0.2,0.6}
+\hypersetup{colorlinks,breaklinks,urlcolor=linkcolour, linkcolor=linkcolour}
+
+%FONTS
+\defaultfontfeatures{Mapping=tex-text}
+%\setmainfont[SmallCapsFont = Fontin SmallCaps]{Fontin}
+%%% modified for Karol Kozioł for ShareLaTeX use
+\setmainfont[
+SmallCapsFont = Fontin-SmallCaps.otf,
+BoldFont = Fontin-Bold.otf,
+ItalicFont = Fontin-Italic.otf
+]
+{Fontin.otf}
+%%%
+
+%CV Sections inspired by: 
+%http://stefano.italians.nl/archives/26
+\titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{3pt}{3pt}
+%Tweak a bit the top margin
+%\addtolength{\voffset}{-1.3cm}
+
+%Italian hyphenation for the word: ''corporations''
+\hyphenation{im-pre-se}
+
+%-------------WATERMARK TEST [**not part of a CV**]---------------
+\usepackage[absolute]{textpos}
+
+\setlength{\TPHorizModule}{30mm}
+\setlength{\TPVertModule}{\TPHorizModule}
+\textblockorigin{2mm}{0.65\paperheight}
+\setlength{\parindent}{0pt}
+
+%--------------------BEGIN DOCUMENT----------------------
+\begin{document}
+
+%WATERMARK TEST [**not part of a CV**]---------------
+%\font\wm=''Baskerville:color=787878'' at 8pt
+%\font\wmweb=''Baskerville:color=FF1493'' at 8pt
+%{\wm 
+%	\begin{textblock}{1}(0,0)
+%		\rotatebox{-90}{\parbox{500mm}{
+%			Typeset by Alessandro Plasmati with \XeTeX\  \today\ for 
+%			{\wmweb \href{http://www.aleplasmati.comuv.com}{aleplasmati.comuv.com}}
+%		}
+%	}
+%	\end{textblock}
+%}
+
+\pagestyle{empty} % non-numbered pages
+
+\font\fb=''[cmr10]'' %for use with \LaTeX command
+
+%--------------------TITLE-------------
+\par{\centering
+		{\Huge \textsc{Richard Knoche}
+	}\bigskip\par}
+
+%--------------------SECTIONS-----------------------------------
+%Section: Personal Data
+\section{Personal Information}
+
+\begin{tabular}{rl}
+    \textsc{Address:}   & 8810 62nd Ave, Berwyn Heights, Maryland 20740 \\
+    \textsc{Phone:}     & (703)-801-4456\\
+    \textsc{email:}     & \href{mailto:raknoche@gmail.com}{raknoche@gmail.com}
+\end{tabular}
+
+
+
+
+
+
+
+%Section: Experience at the top
+\section{Experience}
+\begin{tabular}{r|p{11cm}}
+ \multicolumn{2}{c}{} \\
+ \textsc{Aug 2011 - Present} & Ph.D. Candidate at \textsc{The University of Maryland} \\&\emph{The LUX Dark Matter Detector}\\&\footnotesize{
+ \begin{itemize}
+\item Significant contributions to the world's most sensitive WIMP-nucleon scattering cross section limits.  
+ 
+\item  Developed ground breaking techniques that produced the world's most precise eletron recoil calibration in a liquid xenon TPC.  
+
+\item Developed novel techniques to produce 3D position dependent signal corrections in a spatially and time dependent electric field.  
+
+\item Calibrated the detector's combined energy model.
+
+\item Built on-site gas sampling system for real-time monitoring of xenon impurities at the part-per-trillion level.
+
+\item Automated the extraction of hundreds of data features from calibration data.  
+
+\item One of the first graduate students to lead on-site detector operations as Deputy Science Coordination Manager.
+
+\end{itemize}
+}\\ 
+ \multicolumn{2}{c}{} \\
+ \textsc{June-Sep 2010} & Research Assistant at \textsc{Goddard Space Flight Center} \\&\emph{SWIFT Gamma-Ray Burst Mission}\\&\footnotesize{
+ \begin{itemize}
+\item Analyzed data from Swift Burst Alert Telescope (BAT) to provide the most sensitive search (at the time) for hard X-ray emissions around the on-set time of supernovae.
+\item Quantified the X-ray counterpart to Fermi-LAT pulsar observations using X-ray emission data from the Chandra and BeppoSax missions.
+\end{itemize}
+ 
+ }\\
+ \multicolumn{2}{c}{} \\
+\textsc{Aug 2008 - May 2011} & Research Assistant at \textsc{James Madison University}\\&\emph{Department of Physics and Astronomy}\\&\footnotesize{
+\begin{itemize}
+
+\item Designed and maintained table-top experiments to characterize the complex, non-linear behavior of granular systems.
+\item Implemented computer vision techniques to quantitatively characterize particle movement in a two dimensional shear flow.
+\item Utilized optical polarization techniques to quantify stress networks in granular systems.
+\item Performed statistical analysis to characterize relevant parameters in a two dimensional granular shear flow.
+
+\end{itemize}
+}\\
+\end{tabular}
+
+%Section: Education
+\section{Education}
+\begin{tabular}{rl}	
+ \textsc{Expected} 2016 & Doctor of Philosophy (Ph.D.) in \textsc{Physics}, \textbf{University of Maryland}\\
+& Thesis: ``Signal Corrections and Calibrations in the LUX Dark Matter Detector'' \\&\\
+\textsc{May} 2011& Bachelor of Science (B.S.) in \textsc{Physics}, \textbf{James Madison University} 
+\end{tabular}
+
+%Section: Publications
+\section{Publications}
+\begin{enumerate}  
+\item M.~C.~Carmona-Benitez {\it et al.} [LUX Collaboration],
+  ``First Results of the LUX Dark Matter Experiment,''
+  Nucl.\ Part.\ Phys.\ Proc.\  {\bf 273-275}, 309 (2016).
+  %%CITATION = doi:10.1016/j.nuclphysbps.2015.09.043;%%
+  
+\item D.~S.~Akerib {\it et al.} [LUX Collaboration],
+  ``Chromatographic separation of radioactive noble gases from xenon,''
+  arXiv:1605.03844 [physics.ins-det] (2016).
+  %%CITATION = ARXIV:1605.03844;%%
+  
+\item   D.~S.~Akerib {\it et al.} [LUX Collaboration],
+  ``Results on the Spin-Dependent Scattering of Weakly Interacting Massive Particles on Nucleons from the Run 3 Data of the LUX Experiment,''
+  Phys.\ Rev.\ Lett.\  {\bf 116}, no. 16, 161302 (2016)
+  %%CITATION = doi:10.1103/PhysRevLett.116.161302;%%
+  %24 citations counted in INSPIRE as of 05 Aug 2016
+  
+\item   D.~S.~Akerib {\it et al.} [LUX Collaboration],
+  ``Improved Limits on Scattering of Weakly Interacting Massive Particles from Reanalysis of 2013 LUX Data,''
+  Phys.\ Rev.\ Lett.\  {\bf 116}, no. 16, 161301 (2016)
+  %%CITATION = doi:10.1103/PhysRevLett.116.161301;%%
+  %134 citations counted in INSPIRE as of 05 Aug 2016
+  
+\item   D.~S.~Akerib {\it et al.} [LUX Collaboration],
+  ``Tritium calibration of the LUX dark matter experiment,''
+  Phys.\ Rev.\ D {\bf 93}, no. 7, 072009 (2016)
+  %%CITATION = doi:10.1103/PhysRevD.93.072009;%%
+  %8 citations counted in INSPIRE as of 05 Aug 2016
+  
+\item   D.~S.~Akerib {\it et al.} [LUX Collaboration],
+  ``FPGA-based Trigger System for the LUX Dark Matter Experiment,''
+  Nucl.\ Instrum.\ Meth.\ A {\bf 818}, 57 (2016)
+  %%CITATION = doi:10.1016/j.nima.2016.02.017;%%
+  
+\item   D.~S.~Akerib {\it et al.},
+  ``The LUX Experiment,''
+  Phys.\ Procedia {\bf 61}, 74 (2015).
+  %%CITATION = doi:10.1016/j.phpro.2014.12.013;%%
+  
+\item M.~Horn {\it et al.} [LUX Collaboration],
+  ``Results from the LUX dark matter experiment,''
+  Nucl.\ Instrum.\ Meth.\ A {\bf 784}, 504 (2015).
+  %%CITATION = doi:10.1016/j.nima.2014.11.033;%%
+  %3 citations counted in INSPIRE as of 05 Aug 2016  
+  
+\item   A.~Bradley {\it et al.},
+  ``Radon-related Backgrounds in the LUX Dark Matter Search,''
+  Phys.\ Procedia {\bf 61}, 658 (2015).
+  %%CITATION = doi:10.1016/j.phpro.2014.12.067;%%
+  
+\item   D.~S.~Akerib {\it et al.},
+  ``Radiogenic and Muon-Induced Backgrounds in the LUX Dark Matter Detector,''
+  Astropart.\ Phys.\  {\bf 62}, 33 (2015)
+  %%CITATION = doi:10.1016/j.astropartphys.2014.07.009;%%
+  %27 citations counted in INSPIRE as of 05 Aug 2016
+  
+\item   M.~Szydagis {\it et al.} [LUX Collaboration],
+  ``A Detailed Look at the First Results from the Large Underground Xenon (LUX) Dark Matter Experiment,''  arXiv:1402.3731 [astro-ph.CO] (2014).
+  %%CITATION = ARXIV:1402.3731;%%
+  %15 citations counted in INSPIRE as of 05 Aug 2016
+  
+\item   D.~S.~Akerib {\it et al.} [LUX Collaboration],
+  ``First results from the LUX dark matter experiment at the Sanford Underground Research Facility,''
+  Phys.\ Rev.\ Lett.\  {\bf 112}, 091303 (2014)
+  %%CITATION = doi:10.1103/PhysRevLett.112.091303;%%
+  %1328 citations counted in INSPIRE as of 05 Aug 2016
+
+\item   D.~S.~Akerib {\it et al.} [LUX Collaboration],
+  ``The Large Underground Xenon (LUX) Experiment,''
+  Nucl.\ Instrum.\ Meth.\ A {\bf 704}, 111 (2013)
+  %%CITATION = doi:10.1016/j.nima.2012.11.135;%%
+  %159 citations counted in INSPIRE as of 05 Aug 2016
+ 
+\item   D.~S.~Akerib {\it et al.} [LUX Collaboration],
+  ``Technical Results from the Surface Run of the LUX Dark Matter Experiment,''
+  Astropart.\ Phys.\  {\bf 45}, 34 (2013)
+  %%CITATION = doi:10.1016/j.astropartphys.2013.02.001;%%
+  %42 citations counted in INSPIRE as of 05 Aug 2016
+   
+\end{enumerate}
+
+%Section: Conference Proceedings
+\section{Conference Proceedings}
+\begin{itemize}
+
+\item ``Development of the LUX detector's CH3T calibration source and ER response,'' APS April Meeting, Baltimore, Maryland (April 2015)
+
+\item ``Search for the X-ray Counterpart of Pulsars with GeV Emissions,'' American Astronomical Society Meeting, Seattle, Washington (Jan 2011)
+
+\end{itemize}
+
+%Section: Professional Organizations
+\section{Professional Organizations}
+\begin{itemize}
+
+\item American Physical Society
+
+\end{itemize}
+
+
+%Section: Honors
+\section{Honors}
+\begin{tabular}{rl}
+ \textsc{August} 2010 & John Mather Nobel Scholar Award \\
+\textsc{March} 2010 & Henry W. Leap Scholarship \\
+\textsc{March} 2010 & Sigma Pi Sigma Inductance \\
+2009-2011 & President's List, James Madison University \\
+2008-2011 & Dean's List, James Madison University \\
+\end{tabular}
+
+
+%\hypertarget{gmat}{\textsc{Gmat}\setmainfont{LMRoman10 Regular}\textregistered\setmainfont[SmallCapsFont=Fontin-SmallCaps]{Fontin-Regular}}
+
+%\XeTeXpdffile ''GMAT.pdf'' page 1 scaled 800
+
+\end{document}
