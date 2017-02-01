@@ -1,0 +1,116 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Medium Length Professional CV
+% LaTeX Template
+% Version 2.0 (8/5/13)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Trey Hunner (http://www.treyhunner.com/)
+%
+% Important note:
+% This template requires the resume.cls file to be in the same directory as the
+% .tex file. The resume.cls file provides the resume style used for structuring the
+% document.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass{resume} % Use the custom resume.cls style
+
+\usepackage[left=0.75in,top=0.6in,right=0.75in,bottom=0.6in]{geometry} % Document margins
+\usepackage{color,hyperref}
+\definecolor{darkblue}{rgb}{0.0,0.0,0.5}
+\hypersetup{colorlinks,breaklinks,linkcolor=darkblue,urlcolor=darkblue,anchorcolor=darkblue,citecolor=darkblue}
+
+\name{Richard Knoche} % Your name
+
+\address{(703)-801-4456 \\ \href{mailto: raknoche@gmail.com\\}
+{raknoche@gmail.com}} % Your phone number and email
+\address{ \href{www.dealingdata.net}{www.dealingdata.net} \\ \href{http://www.linkedin.com/in/richardknoche}{www.linkedin.com/in/richardknoche} }% Your phone number and email
+\address{201 Marin Blvd Apt 808, Jersey City, NJ 07302} % Your address
+
+\begin{document}
+
+%----------------------------------------------------------------------------------------
+%	EDUCATION SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{rSection}{Education}
+
+{\bf University of Maryland, College Park} \hfill {\em Aug 2011 - Dec 2016} \\ 
+Doctor of Philosophy (Ph.D) in Physics \\
+Dissertation: Signal Corrections and Calibrations in the LUX Dark Matter Detector
+
+{\bf James Madison University} \hfill {\em Aug 2007 - May 2011} \\ 
+Bachelor of Science (B.S.) in Physics, magna cum laude \\
+
+
+
+\end{rSection}
+
+%----------------------------------------------------------------------------------------
+%	WORK EXPERIENCE SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{rSection}{Experience}
+
+\begin{rSubsection}{Insight Data Science}{\em Jan 2017 - Present}{Data Science Fellow}{ }
+\item Consulted for AptDeco.com to quantify the subjective quality of half a million user-uploaded images.
+\item Implemented 60 hand-crafted image features in a Python-based AdaBoost classifier to automatically identify high-quality and low-quality images with 70\% accuracy.
+\item Results of the classifier will improve editor efficiency by XX\%, saving XX man-hours or XX-dollars.
+\end{rSubsection}
+
+%------------------------------------------------
+
+\begin{rSubsection}{University of Maryland}{\em May 2011 - Dec 2016}{Graduate Research Assistant}{ }
+\item Worked with an international collaboration to produce world leading limits on dark matter interaction.
+\item Developed calibration sources and analysis techniques to remove over 99.9\% of backgrounds from our data. These techniques have been adopted by experiments in the USA, Asia, and Europe.
+\item Implemented maximum likelihood estimation and least squares regression in Python and MATLAB to model the position and temporal dependence of 650 TB of data. Produced corrections for these effects that improved our detector's sensitivity by an order of magnitude.
+\item Automated the extraction of hundreds of data features from calibration data.  Results were maintained in a MySQL database and used in a profile likelihood analysis to extract world leading physics measurements.
+
+
+\end{rSubsection}
+
+%------------------------------------------------
+
+\begin{rSubsection}{NASA Goddard Space Flight Center}{\em June 2010 - Sep 2010}{Research Assistant}{}
+\item Performed exploratory analysis of data from the Swift Burst Alert Telescope (BAT) to search for hard X-ray emissions around the on-set time of supernovae.
+\item Statistically analyzed data from the Chandra and BeppoSax missions to quantify confidence intervals for the X-ray counterpart of Fermi-LAT pulsar observations.
+\end{rSubsection}
+
+\end{rSection}
+
+%----------------------------------------------------------------------------------------
+%	TECHNICAL STRENGTHS SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{rSection}{Technical Strengths}
+
+\begin{tabular}{ @{} >{\bfseries}l @{\hspace{6ex}} l }
+Computer Languages & Python, MATLAB, HTML, CSS \\
+Quantitative Skills & Physics, Mathematics, Confidence Intervals, Error Analysis\\
+Machine Learning & Regression, Classification, Clustering, NLP, Image Processing \\
+Databases & MySQL, PostgreSQL \\
+Tools & SVN, Git
+\end{tabular}
+
+\end{rSection}
+
+%----------------------------------------------------------------------------------------
+%	EXAMPLE SECTION
+%----------------------------------------------------------------------------------------
+
+%\begin{rSection}{Section Name}
+
+%Section content\ldots
+
+%\end{rSection}
+
+%----------------------------------------------------------------------------------------
+
+\end{document}
