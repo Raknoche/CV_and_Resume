@@ -22,10 +22,10 @@
 
 \documentclass{resume} % Use the custom resume.cls style
 
-\usepackage[left=0.75in,top=0.6in,right=0.75in,bottom=0.6in]{geometry} % Document margins
+\usepackage[left=0.6in,top=0.5in,right=0.6in,bottom=0.5in]{geometry} % Document margins
 \usepackage{color,hyperref}
 \definecolor{darkblue}{rgb}{0.0,0.0,0.5}
-\hypersetup{colorlinks,breaklinks,linkcolor=darkblue,urlcolor=darkblue,anchorcolor=darkblue,citecolor=darkblue}
+\hypersetup{colorlinks,breaklinks,linkcolor=black,urlcolor=black,anchorcolor=darkblue,citecolor=darkblue}
 
 \usepackage{amsmath,scalerel}
 \DeclareMathOperator*{\Bigcdot}{\scalerel*{\cdot}{\bigodot}}
@@ -45,14 +45,14 @@
 
 \begin{rSection}{Education}
 
-{\bf University of Maryland, College Park} \hfill {\em Aug 2011 - Dec 2016} \\ 
+{\bf University of Maryland, College Park} \hfill {Aug 2011 - Dec 2016} \\ 
 Doctor of Philosophy (Ph.D) in Physics \\
 Dissertation: Signal Corrections and Calibrations in the LUX Dark Matter Detector
 
-{\bf James Madison University} \hfill {\em Aug 2007 - May 2011} \\ 
+{\bf James Madison University} \hfill {Aug 2007 - May 2011} \\ 
 Bachelor of Science (B.S.) in Physics, magna cum laude \\
 
-
+\vspace{-1em}
 
 \end{rSection}
 
@@ -62,7 +62,7 @@ Bachelor of Science (B.S.) in Physics, magna cum laude \\
 
 \begin{rSection}{Experience}
 
-\begin{rSubsection}{Insight Data Science}{\em Jan 2017 - Present}{Data Science Fellow}{ }
+\begin{rSubsection}{Insight Data Science}{Data Science Fellow}{Jan 2017 - Present}{}{ }
 \item Consulted for AptDeco.com to quantify the subjective quality of half a million user-uploaded images.
 \item Implemented 60 hand-crafted image features in a Python-based AdaBoost classifier to automatically identify high-quality and low-quality images with 70\% accuracy.
 \item Results of the classifier will improve editor efficiency by XX\%, saving XX man-hours or XX-dollars.
@@ -70,22 +70,34 @@ Bachelor of Science (B.S.) in Physics, magna cum laude \\
 
 %------------------------------------------------
 
-\begin{rSubsection}{University of Maryland}{\em May 2011 - Dec 2016}{Graduate Research Assistant}{ }
-\item Worked with an international collaboration to produce world leading limits on dark matter interaction.
-\item Developed calibration sources and analysis techniques to remove over 99.9\% of backgrounds from our data. These techniques have been adopted by experiments in the USA, Asia, and Europe.
-\item Implemented maximum likelihood estimation and least squares regression in Python and MATLAB to model the position and temporal dependence of 650 TB of data. Produced corrections for these effects that improved our detector's sensitivity by an order of magnitude.
-\item Automated the extraction of hundreds of data features from calibration data.  Results were maintained in a MySQL database and used in a profile likelihood analysis to extract world leading physics measurements.
+\begin{rSubsection}{University of Maryland}{Graduate Research Assitant}{May 2011 - Dec 2016}{}{ }
+
+\item Developed analysis techniques to remove over 99.9\% of background signals from our data. These techniques have been adopted by experiments in the USA, Asia, and Europe.
+\item Implemented maximum likelihood estimation in Python and MATLAB to produce signal corrections and improve our detector's sensitivity by an order of magnitude.
+\item Automated the extraction of hundreds of data features from 650 TB of data.  Maintained these features in a MySQL database that was queried by 200 collaborators.
 
 
 \end{rSubsection}
 
 %------------------------------------------------
 
-\begin{rSubsection}{NASA Goddard Space Flight Center}{\em June 2010 - Sep 2010}{Research Assistant}{}
-\item Performed exploratory analysis of data from the Swift Burst Alert Telescope (BAT) to search for hard X-ray emissions around the on-set time of supernovae.
-\item Statistically analyzed data from the Chandra and BeppoSax missions to quantify confidence intervals for the X-ray counterpart of Fermi-LAT pulsar observations.
+\begin{rSubsection}{NASA GSFC}{Research Assistant}{June 2010 - Sep 2010}{}{}
+\item Performed exploratory and statistical analysis of data from the Swift Burst Alert Telescope (BAT) to search for hard X-ray emissions around the on-set time of supernovae.
 \end{rSubsection}
 
+\end{rSection}
+
+%----------------------------------------------------------------------------------------
+%	PERSONAL PROJECTS SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{rSection}{Personal Projects}
+
+\begin{rSubsection}{DealingData.net}{Data Science Blog}{Jul 2016 - Present}{}
+\item Predicted the top fantasy football performers of each season with a support vector machine ($R^2=0.72$).  Used K-means clustering to automatically extract tiers of players to target during a fantasy draft. 
+\item Implemented a Naive Bayes sentiment analysis on Pokemon Go tweets from each state.  Used the results to measure the dominance of each team across the country. Visualized the results in an interactive map. 
+\item Presented in-depth tutorials on various topics, including time series analysis, statistical analysis of correlated variables, Bayesian statistics, specific APIs, web scraping, and web hosting.
+\end{rSubsection}
 \end{rSection}
 
 %----------------------------------------------------------------------------------------
@@ -94,26 +106,16 @@ Bachelor of Science (B.S.) in Physics, magna cum laude \\
 
 \begin{rSection}{Technical Strengths}
 
-\begin{tabular}{ @{} >{\bfseries}l @{\hspace{6ex}} l }
+\begin{tabular}{ @{} >{\bfseries}l @{\hspace{8ex}} l }
 Computer Languages & Python, MATLAB, HTML, CSS \\
-Quantitative Skills & Physics, Mathematics, Confidence Intervals, Error Analysis\\
+Quantitative Skills & Physics, Mathematics, Statistics, Error Analysis\\
 Machine Learning & Regression, Classification, Clustering, NLP, Image Processing \\
-Databases & MySQL, PostgreSQL \\
-Tools & SVN, Git
+Tools & SVN, Git \\
+Databases & MySQL \\
 \end{tabular}
+
 
 \end{rSection}
 
-%----------------------------------------------------------------------------------------
-%	EXAMPLE SECTION
-%----------------------------------------------------------------------------------------
-
-%\begin{rSection}{Section Name}
-
-%Section content\ldots
-
-%\end{rSection}
-
-%----------------------------------------------------------------------------------------
 
 \end{document}
