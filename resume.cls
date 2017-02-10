@@ -35,15 +35,17 @@
 \def \name#1{\def\@name{#1}} % Defines the \name command to set name
 \def \@name {} % Sets \@name to empty by default
 
-\def \addressSep {$\diamond$} % Set default address separator to a diamond
+\def \addressSep {$\Bigcdot$} % Set default address separator to a diamond
 
 % One, two or three address lines can be specified 
 \let \@addressone \relax
 \let \@addresstwo \relax
 \let \@addressthree \relax
 
+
 % \address command can be used to set the first, second, and third address (last 2 optional)
 \def \address #1{
+
   \@ifundefined{@addresstwo}{
     \def \@addresstwo {#1}
   }{
@@ -56,12 +58,15 @@
 
 % \printaddress is used to style an address line (given as input)
 \def \printaddress #1{
+  \vspace{-0.2em}
+
   \begingroup
     \def \\ {\addressSep\ }
     \centerline{#1}
   \endgroup
   \par
   \addressskip
+
 }
 
 % \printname is used to print the name as a page header
@@ -69,6 +74,8 @@
   \begingroup
     \hfil{\MakeUppercase{\namesize\bf \@name}}\hfil
     \nameskip\break
+    \vspace{-1em}
+
   \endgroup
 }
 
@@ -111,10 +118,10 @@
 %----------------------------------------------------------------------------------------
 
 \newenvironment{rSubsection}[4]{ % 4 input arguments - company name, year(s) employed, job title and location
- {\bf #1} {\em #2} \hfill {#3} % Bold company name and date on the right
+ \hspace{-1em} {\bf #1} {\em #2} \hfill {#3} % Bold company name and date on the right
  \ifthenelse{\equal{#3}{}}{}{ % If the third argument is not specified, don't print the job title and location line
   }\smallskip
-  \begin{list}{$\Bigcdot$}{\leftmargin=0em} % \cdot used for bullets, no indentation
+  \begin{list}{$\Bigcdot$}{\leftmargin=0.5em} % \cdot used for bullets, no indentation
    \itemsep -0.4em \vspace{-0.4em} % Compress items in list together for aesthetics
   }{
   \end{list}
